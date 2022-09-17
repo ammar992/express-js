@@ -2,9 +2,10 @@ const express = require("express");
 const connectDB = require('./db/connectiondb');
 const {join} = require('path');
 const web = require('./routes/web');
+const dotenv = require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 4000; 
+const PORT = process.env.PORT ||  4000; 
 const DATABASE_URL = "mongodb://localhost:27017";
 
 

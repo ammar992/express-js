@@ -1,0 +1,29 @@
+
+<%- include('./partials/header.ejs')  %>
+    
+<div class="container">
+    <div class="row mt-5 w-75 mx-auto ">
+        <div class="col">
+        <h2 class="alert alert-success text-center">Update student</h2>    
+        <form method="post" >
+        <div class="mb-3 ">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" id="name" required name="name" class="form-control">
+        </div>    
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" id="age" required name="age" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" required name="salary" id="salary" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+        </div>
+        
+    </div>
+</div>
+
+
+<%- include('./partials/footer.ejs')  %>

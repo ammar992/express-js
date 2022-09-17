@@ -1,0 +1,61 @@
+
+<%- include('./partials/header.ejs')  %>
+    
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm-6">
+        <h2 class="alert alert-success text-center">Add student</h2>    
+        <form method="post">
+
+            
+        <div class="mb-3">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" id="name" required name="name" class="form-control">
+        </div>    
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" id="age" required name="age" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" required name="salary" id="salary" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+        <div class="col-sm-6">
+            <h2 class="alert alert-danger text-center">List of Students</h2>
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Sno</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% var i = 1 %>
+            <% data.forEach(function(item){%>
+                <tr>
+                    <td><%= i++%></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.age %></td>
+                    <td><%= item.salary %></td> 
+                    <td>
+                        <i class="fas fa-pen-square text-info"></i>
+                        <i class="fas fa-trash text-danger"></i>
+                    </td>
+                </tr>
+
+                <%})%>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<%- include('./partials/footer.ejs')  %>
